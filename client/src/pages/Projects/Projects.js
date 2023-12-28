@@ -1,25 +1,28 @@
 import React from "react";
 import "./Projects.css";
+import Fade from "react-reveal/Fade";
 // import Spin from "react-reveal/Spin";
 const Projects = () => {
   return (
     <>
       <div className="continer project" id="projects">
-        <h2 className="col-12 mt-3 mb-1 text-center text-uppercase">
-          MY PROJECTS
-        </h2>
-        <hr />
-        <p className="pb-3 text-center">
-          Welcome to my project page, where innovation meets functionality!
-          Here, I'm thrilled to showcase three distinct projects - Homyz, Blood
-          Bank, and WeatherApp. Each project represents a unique facet of my skills
-          and interests, offering a glimpse into the versatile world of
-          technology.
-        </p>
+        <Fade right>
+          <h2 className="col-12 mt-3 mb-1 text-center text-uppercase">
+            MY PROJECTS
+          </h2>
+          <hr />
 
+          <p className="pb-3 text-center">
+            Welcome to my project page, where innovation meets functionality!
+            Here, I'm thrilled to showcase three distinct projects - Homyz,
+            Blood Bank, and WeatherApp. Each project represents a unique facet
+            of my skills and interests, offering a glimpse into the versatile
+            world of technology.
+          </p>
+        </Fade>
         {/* card design */}
         <div className="row" id="ads">
-          {/* <Spin> */}
+          <Fade left>
 
           {/* Project 1 */}
           <div className="col-md-4">
@@ -101,7 +104,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-          {/* </Spin> */}
+          </Fade>
         </div>
       </div>
     </>
