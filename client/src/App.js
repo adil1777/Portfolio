@@ -1,5 +1,6 @@
 import './App.css';
 import Layout from './components/Layout/Layout';
+import MobileNav from './components/MobileNav/MobileNav';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Education from './pages/Education/Education';
@@ -11,6 +12,7 @@ import ScrollToTop from "react-scroll-up-to-top";
 function App() {
   return (
     <>
+      <MobileNav/>
       <Layout/>
       <div className="container">
         <About/>

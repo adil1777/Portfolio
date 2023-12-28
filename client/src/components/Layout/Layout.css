@@ -23,3 +23,10 @@
     color:white;
     margin-top: 30px;
 }
+
+/* Respinsive For Mobile */
+@media(max-width:600px) {
+  .sidebar {
+    display:none;
+  }
+}

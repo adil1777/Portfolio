@@ -9,7 +9,6 @@ import {
   FcBiotech,
   FcReading,
   FcVideoProjector,
-  FcVoicePresentation,
   FcBusinessContact,
 } from "react-icons/fc";
 import { Link } from "react-scroll";

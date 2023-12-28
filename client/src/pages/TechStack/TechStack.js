@@ -16,7 +16,6 @@ const TechStack = () => {
             👉 including Programming Languages , frameworks , databases,
             front-end and back-end tools , and APIs
           </p>
-          <hr />
         </Fade>
         <div className="row">
           {TechStackList.map((tech) => (
