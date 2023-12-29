@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 import Fade from 'react-reveal/Fade';
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 import contact from "../../assets/images/contact.png"
+import { toast } from "react-toastify";
+import axios from 'axios';
+
+
 const Contact = () => {
+  const [name , setName] = useState("");
+  const [email , setEmail] = useState("");
+  const [msg , setMsg] = useState("");
+
+  //handle Submit Button
+  const handleSubmit = async(e)=>{
+    e.preventDefault();
+    try{
+      if(!name || !email || !msg){
+        alert("please Provide all fields");
+      }
+      const BASE_URL=process.env.BASE_UR;
+      const res = await axios.post(`${BASE_URL}/api/v1/portfolio/sendEmail` ,{name , email ,msg});
+
+      //validation success
+      if(res.data.success){
+        toast.success(res.data.message);
+        setName("");
+        setEmail("");
+        setMsg("");
+      }
+      else{
+        toast.error(res.data.message);
+      }
+
+
+    }
+    catch(error){
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <div className=" contact" id="contact">
@@ -49,6 +85,8 @@ const Contact = () => {
                         name="name"
                         placeholder="Enter your Name"
                         className="mb-3"
+                        value={name}
+                        onChange= {(e)=> setName(e.target.value)}
                       />
                     </div>
                     <div className="row px-3">
@@ -57,6 +95,8 @@ const Contact = () => {
                         name="email"
                         placeholder="Enter Your Email Address"
                         className="mb-3"
+                        value={email}
+                        onChange= {(e)=> setEmail(e.target.value)}
                       />
                     </div>
                     <div className="row px-3">
@@ -65,11 +105,13 @@ const Contact = () => {
                         name="msg"
                         placeholder="Write your message"
                         className="mb-3"
+                        value={msg}
+                        onChange= {(e)=> setMsg(e.target.value)}
                        
                       />
                     </div>
                     <div className="row px-3">
-                      <button className="button" >
+                      <button className="button"  onClick={handleSubmit}>
                         SEND MESSAGE
                       </button>
                     </div>
