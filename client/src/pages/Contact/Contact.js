@@ -20,7 +20,7 @@ const Contact = () => {
         return;
       }
       const res = await axios.post(
-        "https://portfolio-backenedd.onrender.com/sendEmail",
+        "http://localhost:8080/api/v1/portfolio/sendEmail",
         { name, email, msg }
       );
 

@@ -1,36 +1,42 @@
 const nodemailer = require("nodemailer");
 
-//transport
-const emailId=process.env.EMAIL
-const passwordId=process.env.PASSWORD
+// Transport
+const dotenv = require("dotenv")
+
+dotenv.config();
+
+const appEmail = process.env.SMTP_MAIL;
+const appPassword = process.env.SMTP_PASS;
+
 const transporter = nodemailer.createTransport({
-  service:"gmail",
+  service: "gmail",
   auth: {
-    user:emailId,
-    pass:passwordId,
-}
+    user: appEmail,
+    pass: appPassword,
+  },
+  tls: {
+    rejectUnauthorized: false,
+  },
 });
 
+const sendEmailController = async (req, res) => {
+  try {
+    const { name, email, msg } = req.body;
 
-
-const sendEmailController= (req,res)=>{
-  try{
-    const {name , email , msg} =req.body;
-
-    //validation
-    if(!name || !email || !msg){
-      return res.send(500).send({
-        success:false,
-        message:'Please Provide All Fields'
-      })
+    // Validation
+    if (!name || !email || !msg) {
+      return res.status(400).send({
+        success: false,
+        message: 'Please Provide All Fields',
+      });
     }
 
-  //email matter
-  transporter.sendMail({
-    from: email,
-    to: process.env.EMAIL,
-    subject: "Regarding Mern Portfolio App",
-    html: `
+    // Email content
+    const mailOptions = {
+      from: email,
+      to: appEmail,
+      subject: "Regarding Mern Portfolio App",
+      html: `
         <h5>Detail Information</h5>
         <ul>
           <li><p>Name : ${name}</p></li>
@@ -38,21 +44,26 @@ const sendEmailController= (req,res)=>{
           <li><p>Message : ${msg}</p></li>
         </ul>
       `,
-  });
- 
-  return res.status(200).send({
-    success: true,
-    message: "Your Message Send Successfully",
-  });
+    };
 
-  }
-  catch(error){
-    console.log("Error" + error)
+    // Send email
+    const info = await transporter.sendMail(mailOptions);
+
+    console.log("Email sent:", info.response);
+
+    return res.status(200).send({
+      success: true,
+      message: "Your Message Sent Successfully",
+    });
+  } catch (error) {
+    console.error("Error:", error);
+
     return res.status(500).send({
-        success:false,
-        message:'Send Email API Failed',
-        error
-    })
+      success: false,
+      message: 'Failed to send email',
+      error: error.message,
+    });
   }
 };
-module.exports= {sendEmailController};
+
+module.exports = { sendEmailController };
