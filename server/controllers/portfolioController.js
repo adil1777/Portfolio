@@ -1,13 +1,13 @@
 const nodemailer = require("nodemailer");
 
 //transport
-const emailId =process.env.EMAIL
-const passwordId = process.env.PASSWORD
+const emailId=process.env.EMAIL
+const passwordId=process.env.PASSWORD
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  service:"gmail",
   auth: {
-    user:{emailId},
-    pass: {passwordId}
+    user:emailId,
+    pass:passwordId,
 }
 });
 
