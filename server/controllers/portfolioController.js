@@ -1,11 +1,13 @@
 const nodemailer = require("nodemailer");
 
 //transport
+const emailId =process.env.EMAIL
+const passwordId = process.env.PASSWORD
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user:"mohdadil0760@gmail.com",
-    pass:"sjefbfutdcmebhfe"
+    user:{emailId},
+    pass: {passwordId}
 }
 });
 
@@ -26,7 +28,7 @@ const sendEmailController= (req,res)=>{
   //email matter
   transporter.sendMail({
     from: email,
-    to:"mohdadil0760@gmail.com",
+    to: process.env.EMAIL,
     subject: "Regarding Mern Portfolio App",
     html: `
         <h5>Detail Information</h5>
