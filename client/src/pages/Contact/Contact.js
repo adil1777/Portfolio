@@ -17,10 +17,10 @@ const Contact = () => {
     e.preventDefault();
     try{
       if(!name || !email || !msg){
-        alert("please Provide all fields");
+        toast.error("please Provide all fields");
+        return;
       }
-      const BASE_URL=process.env.BASE_UR;
-      const res = await axios.post(`${BASE_URL}/api/v1/portfolio/sendEmail` ,{name , email ,msg});
+      const res = await axios.post('http://localhost:8080/api/v1/portfolio/sendEmail' ,{name , email ,msg});
 
       //validation success
       if(res.data.success){
@@ -32,11 +32,9 @@ const Contact = () => {
       else{
         toast.error(res.data.message);
       }
-
-
-    }
-    catch(error){
-      console.log(error);
+    } catch (error) {
+      console.error(error);
+      toast.error("Error sending message. Please try again later.");
     }
   };
 
@@ -125,5 +123,4 @@ const Contact = () => {
     </>
   );
 };
-
 export default Contact;

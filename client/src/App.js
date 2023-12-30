@@ -8,12 +8,11 @@ import Projects from './pages/Projects/Projects';
 import TechStack from './pages/TechStack/TechStack';
 import WorkExp from './pages/WorkExp/WorkExp';
 import ScrollToTop from "react-scroll-up-to-top";
-import { ToastContainer} from 'react-toastify';
+
 
 function App() {
   return (
     <>
-    <ToastContainer/>
       <MobileNav/>
       <Layout/>
       <div className="container">

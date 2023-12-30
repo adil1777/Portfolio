@@ -9,4 +9,4 @@ router.post("/sendEmail", sendEmailController)
 
 
 //export
-module.exports=router;
+module.exports=router;clearImmediate

@@ -1,13 +1,14 @@
 const nodemailer = require("nodemailer");
 
+//transport
 const transporter = nodemailer.createTransport({
-  host: 'smtp.ethereal.email',
-  port: 587,
+  service: "gmail",
   auth: {
-      user: 'columbus.langosh34@ethereal.email',
-      pass: 'FsFRGmCK9knnVra67E'
-  }
+    user:"mohdadil0760@gmail.com",
+    pass:"sjefbfutdcmebhfe"
+}
 });
+
 
 
 const sendEmailController= (req,res)=>{
@@ -22,12 +23,12 @@ const sendEmailController= (req,res)=>{
       })
     }
 
-     //email matter
-     const info= transporter.sendMail({
-      to: '"Mohd Adil" <mohdadil0760@gmail.com>',
-      from: "mohdadil0760@gmail.com",
-      subject: "Regarding Mern Portfolio App",
-      html: `
+  //email matter
+  transporter.sendMail({
+    from: email,
+    to:"mohdadil0760@gmail.com",
+    subject: "Regarding Mern Portfolio App",
+    html: `
         <h5>Detail Information</h5>
         <ul>
           <li><p>Name : ${name}</p></li>
@@ -35,17 +36,16 @@ const sendEmailController= (req,res)=>{
           <li><p>Message : ${msg}</p></li>
         </ul>
       `,
-    });
-
-    console.log(info.messageId);
-    return res.status(200).send({
-        success:true,
-        message:'Your Message Send Successfully'
-    });
+  });
+ 
+  return res.status(200).send({
+    success: true,
+    message: "Your Message Send Successfully",
+  });
 
   }
   catch(error){
-    console.log(error);
+    console.log("Error" + error)
     return res.status(500).send({
         success:false,
         message:'Send Email API Failed',
