@@ -1,7 +1,7 @@
 const express = require("express");
 const cors =require ('cors');
 const dotenv = require('dotenv');
-const mail = require("../server/routes/portfolioRoute")
+const user = require("../server/routes/portfolioRoute")
 //dotenv configuration
 dotenv.config();
 
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 //routes
-app.use('/api/v1/portfolio',mail);
+app.use('/api/v1/portfolio',user);
 
 //PORT
  const PORT =process.env.PORT || 8000;

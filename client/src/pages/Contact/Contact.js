@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import Fade from "react-reveal/Fade";
+import { Reveal, Fade } from "react-awesome-reveal";
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
 import contact from "../../assets/images/contact.png";
 import { toast } from "react-toastify";
@@ -11,12 +11,11 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
 
-  //handle Submit Button
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       if (!name || !email || !msg) {
-        toast.error("please Provide all fields");
+        toast.error("Please provide all fields");
         return;
       }
       const res = await axios.post(
@@ -24,7 +23,6 @@ const Contact = () => {
         { name, email, msg }
       );
 
-      //validation succe
       if (res.data.success) {
         toast.success(res.data.message);
         setName("");
@@ -40,52 +38,45 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <div className=" contact" id="contact">
+    <Reveal effect="fadeIn">
+      <div className="contact" id="contact">
         <div className="card card0 border-0">
           <div className="row">
-            <Fade left>
-              <div className="col-md-6 col-lg-6 col-xl-6 col-sm-12">
+            <div className="col-md-6 col-lg-6 col-xl-6 col-sm-12">
+              <Fade direction="left" triggerOnce>
                 <div className="card1">
                   <div className="row border-line">
                     <img src={contact} alt="contact" className="image" />
                   </div>
                 </div>
-              </div>
-            </Fade>
-            <Fade right>
-              <div className="col-lg-6 col-md-6">
+              </Fade>
+            </div>
+            <div className="col-lg-6 col-md-6">
+              <Fade direction="right" triggerOnce>
                 <div className="card2 d-flex card border-0 px-4 py-5">
                   <div className="row">
-                    <div className="row">
-                      <h6>
-                        Contact With
-                        <a
-                          href="https://www.linkedin.com/in/mohd-adil-305999215/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <BsLinkedin
-                            color="#0077b5"
-                            size={30}
-                            className="ms-2"
-                          />
-                        </a>
-                        <a
-                          href="https://github.com/adil1777?tab=repositories"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <BsGithub color="black" size={30} className="ms-2" />
-                        </a>
-                        <BsFacebook
+                    <h6>
+                      Contact With
+                      <a
+                        href="https://www.linkedin.com/in/mohd-adil-305999215/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <BsLinkedin
                           color="#0077b5"
                           size={30}
                           className="ms-2"
                         />
-                      </h6>
-                    </div>
-
+                      </a>
+                      <a
+                        href="https://github.com/adil1777?tab=repositories"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <BsGithub color="black" size={30} className="ms-2" />
+                      </a>
+                      <BsFacebook color="#0077b5" size={30} className="ms-2" />
+                    </h6>
                     <div className="row px-3 mb-4">
                       <div className="line" />
                       <small className="or text-center">OR</small>
@@ -128,12 +119,13 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </Fade>
+              </Fade>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </Reveal>
   );
 };
+
 export default Contact;

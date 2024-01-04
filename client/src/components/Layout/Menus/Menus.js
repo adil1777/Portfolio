@@ -1,7 +1,7 @@
 import React from "react";
 import "./Menus.css";
-import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
+import { Fade } from "react-awesome-reveal";
+import {Zoom} from "react-awesome-reveal";
 import {
   FcHome,
   FcAbout,

@@ -1,13 +1,14 @@
 import React from "react";
 import "./TechStack.css";
-import Fade from "react-reveal/Fade";
+import { Reveal, Fade } from "react-awesome-reveal";
 import { TechStackList } from "../../utils/TechStackList";
 
 const TechStack = () => {
   return (
     <>
+    <Reveal effect="fadeIn">
       <div className="container techstack" id="techstack">
-        <Fade right>
+        <Fade >
           <h2 className="col-12 mt-3 mb-1 text-center text-uppercase">
             Technologies Stack
           </h2>
@@ -19,7 +20,7 @@ const TechStack = () => {
         </Fade>
         <div className="row">
           {TechStackList.map((tech) => (
-            <Fade left>
+            <Fade >
               <div className="col-md-3" key={tech._id}>
                 <div className="card m-2">
                   <div className="card-content">
@@ -40,6 +41,7 @@ const TechStack = () => {
           ))}
         </div>
       </div>
+      </Reveal>
     </>
   );
 };
