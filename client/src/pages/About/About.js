@@ -5,7 +5,7 @@ import { Reveal, Fade } from "react-awesome-reveal";
 const About = () => {
   return (
     <>
-     <Reveal effect="jumpIn">
+     <Reveal effect="fadeIn">
       <div className="about" id="about">
         <div className="row">
           <div className="col-md-6  col-xl-6 col-lg-6 col-xs-12 about-img">

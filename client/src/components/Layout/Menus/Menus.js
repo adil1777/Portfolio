@@ -1,6 +1,6 @@
 import React from "react";
 import "./Menus.css";
-import { Fade } from "react-awesome-reveal";
+import { Fade ,Reveal} from "react-awesome-reveal";
 import {Zoom} from "react-awesome-reveal";
 import {
   FcHome,
@@ -23,6 +23,7 @@ const Menus = ({ toggle }) => {
               <img src="image.jpeg" alt="profile pic" />
             </div>
           </Zoom>
+          <Reveal effect="fadeIn">
           <Fade left>
             <div className="nav-items">
               <div className="nav-item">
@@ -118,9 +119,11 @@ const Menus = ({ toggle }) => {
               </div>
             </div>
           </Fade>
+          </Reveal>
         </>
       ) : (
         <>
+        <Reveal effect="fadeIn">
           <Fade left>
             <div className="nav-items">
               <div className="nav-item">
@@ -204,6 +207,7 @@ const Menus = ({ toggle }) => {
               </div>
             </div>
           </Fade>
+          </Reveal>
         </>
       )}
     </>

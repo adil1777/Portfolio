@@ -5,23 +5,24 @@ import { TechStackList } from "../../utils/TechStackList";
 
 const TechStack = () => {
   return (
-    <>
-    <Reveal effect="fadeIn">
-      <div className="container techstack" id="techstack">
-        <Fade >
+    <div className="container techstack" id="techstack">
+      <Reveal effect="fadeIn">
+        <Fade>
           <h2 className="col-12 mt-3 mb-1 text-center text-uppercase">
             Technologies Stack
           </h2>
           <hr />
           <p className="pb-3 text-center">
-            👉 including Programming Languages , frameworks , databases,
-            front-end and back-end tools , and APIs
+            👉 including Programming Languages, frameworks, databases,
+            front-end and back-end tools, and APIs
           </p>
         </Fade>
-        <div className="row">
-          {TechStackList.map((tech) => (
-            <Fade >
-              <div className="col-md-3" key={tech._id}>
+      </Reveal>
+      <div className="row">
+        {TechStackList.map((tech) => (
+          <div className="col-md-3" key={tech._id}>
+            <Reveal effect="fadeIn">
+              <Fade>
                 <div className="card m-2">
                   <div className="card-content">
                     <div className="card-body">
@@ -36,13 +37,12 @@ const TechStack = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </Fade>
-          ))}
-        </div>
+              </Fade>
+            </Reveal>
+          </div>
+        ))}
       </div>
-      </Reveal>
-    </>
+    </div>
   );
 };
 
