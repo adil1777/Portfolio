@@ -5,30 +5,50 @@ import { Reveal, Fade } from "react-awesome-reveal";
 const About = () => {
   return (
     <>
-     <Reveal effect="fadeIn">
-      <div className="about" id="about">
-        <div className="row">
-          <div className="col-md-6  col-xl-6 col-lg-6 col-xs-12 about-img">
-            <img src="image.jpeg" alt="profile_pic" />
-          </div>
-          <div className="col-md-6  col-xl-6 col-lg-6 col-xs-12 about-content">
-            <h1>About Me</h1>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Voluptate molestias corporis quibusdam eligendi voluptatibus
-              distinctio sit ratione explicabo ut adipisci necessitatibus
-              tenetur repudiandae nemo, eaque hic fugiat veritatis nulla laborum
-              impedit. Architecto quos excepturi rem ipsa perspiciatis
-              doloremque obcaecati atque, ab numquam unde pariatur consequatur
-              odio dolor tenetur dolorum impedit et magnam sed quasi culpa
-              similique, suscipit recusandae vero. Accusantium eius dicta ullam
-              ut, quia deleniti sequi reprehenderit modi voluptatum quidem
-              tenetur quod porro saepe, veritatis fuga aperiam exercitationem
-              repellendus consequatur ullam distinctio quae aut quo totam sit!
-            </p>
+      <Reveal effect="fadeIn">
+        <div className="about" id="about">
+          <div className="row">
+            <div className="col-md-6  col-xl-6 col-lg-6 col-xs-12 about-img">
+              <img src="image.jpeg" alt="profile_pic" />
+            </div>
+            <div className="col-md-6  col-xl-6 col-lg-6 col-xs-12 about-content">
+              <h1>About Me</h1>
+              <p>
+                Greetings! I am <span className="self">Mohd Adil</span>,
+                currently pursuing my Bachelor's degree in{" "} 
+                <span className="self">Computer Science and Engineering</span>{" "}
+                at <span className="self">KIET Group of Institutions </span> in{" "}
+                <span className="self">Ghaziabad</span>. Originally from{" "}
+                <span className="self">Azamgarh</span> , I completed my{" "}
+                <span className="self">10th</span> and {" "}
+                <span className="self">12th</span> studies at{" "}
+                <span className="self">Azamgarh Public School </span>. My
+                academic journey has fueled my passion for programming, and I
+                specialize in languages like <span className="self">C</span>,{" "}
+                <span className="self">C++</span>,{" "}
+                <span className="self">HTML</span>,{" "}
+                <span className="self">CSS</span>,{" "}
+                <span className="self">JavaScript</span>,{" "}
+                <span className="self">React.js</span>, and{" "}
+                <span className="self">Node.js</span>. I've translated my skills
+                into practical projects, including{" "}
+                <span className="self pro">
+                <a href="https://blood-bank-ym3c.onrender.com/#/login" style={{textDecoration:'none'}}>
+                LifeDropHub </a></span> and{" "}
+                <span className="self pro"> 
+                 <a href="https://full-stack-real-estate-jade.vercel.app/" style={{textDecoration:'none'}}>Homyz </a></span>. Adding to my experience, I
+                undertook a rewarding web development internship with{" "}
+                <span className="self">Oasis Infobyte</span>. This opportunity
+                not only allowed me to contribute to real-world projects but
+                also significantly enhanced my technical prowess. I am
+                enthusiastic about leveraging technology to solve problems and
+                am always eager to explore new horizons in the field of computer
+                science. Feel free to explore my portfolio to learn more about
+                my projects and experiences.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
       </Reveal>
     </>
   );
