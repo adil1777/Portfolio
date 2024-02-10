@@ -82,22 +82,23 @@ const Projects = () => {
             <div className="col-md-4">
               <div className="card rounded">
                 <div className="card-image">
-                  <span className="card-notify-badge">Backend</span>
+                  <span className="card-notify-badge">Full stack</span>
                   <img
-                    src="https://www.nextwebi.com/assets/img/img-source/mobile-top-banner-28.png"
+                    src="doccare.png"
                     alt="project1"
                   />
                 </div>
                 <div className="card-image-overly m-auto mt-3">
-                  <span className="card-detail-badge">Node</span>
+                <span className="card-detail-badge">React</span>
                   <span className="card-detail-badge">Express</span>
-                  <span className="card-detail-badge">NoSQL</span>
+                  <span className="card-detail-badge">Node</span>
+                  <span className="card-detail-badge">Mongodb</span>
                 </div>
                 <div className="card-body text-center">
                   <div className="ad-title m-auto">
-                    <h5 className="text-uppercase"> Job Portal</h5>
+                    <h5 > DocCare</h5>
                   </div>
-                  <a className="ad-btn" href="view">
+                  <a className="ad-btn" href="https://doccare-mln1.onrender.com">
                     View
                   </a>
                 </div>
