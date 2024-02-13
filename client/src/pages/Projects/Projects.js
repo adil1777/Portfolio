@@ -31,7 +31,7 @@ const Projects = () => {
                   <span className="card-notify-badge">Full stack</span>
                   <img src="banner1.jpg" alt="project1" />
                 </div>
-                <div className="card-image-overly m-auto mt-3">
+                <div className="card-image-overlay m-auto mt-3">
                   <span className="card-detail-badge">React</span>
                   <span className="card-detail-badge">Express</span>
                   <span className="card-detail-badge">Node</span>
@@ -44,6 +44,7 @@ const Projects = () => {
                   <a
                     className="ad-btn"
                     href="https://blood-bank-ym3c.onrender.com/#/login"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     View
                   </a>
@@ -58,7 +59,7 @@ const Projects = () => {
                   <span className="card-notify-badge">Full stack</span>
                   <img src="homyz.png" alt="project2" />
                 </div>
-                <div className="card-image-overly m-auto mt-3">
+                <div className="card-image-overlay m-auto mt-3">
                   <span className="card-detail-badge">React</span>
                   <span className="card-detail-badge">Express</span>
                   <span className="card-detail-badge">Node</span>
@@ -71,6 +72,7 @@ const Projects = () => {
                   <a
                     className="ad-btn"
                     href="https://full-stack-real-estate-jade.vercel.app/"
+                    target="_blank" rel="noopener noreferrer"
                   >
                     View
                   </a>
@@ -88,7 +90,7 @@ const Projects = () => {
                     alt="project1"
                   />
                 </div>
-                <div className="card-image-overly m-auto mt-3">
+                <div className="card-image-overlay m-auto mt-3">
                 <span className="card-detail-badge">React</span>
                   <span className="card-detail-badge">Express</span>
                   <span className="card-detail-badge">Node</span>
@@ -98,7 +100,10 @@ const Projects = () => {
                   <div className="ad-title m-auto">
                     <h5 > DocCare</h5>
                   </div>
-                  <a className="ad-btn" href="https://doccare-mln1.onrender.com">
+                  <a className="ad-btn" 
+                  href="https://doccare-mln1.onrender.com"
+                  target="_blank" rel="noopener noreferrer"
+                  >
                     View
                   </a>
                 </div>
