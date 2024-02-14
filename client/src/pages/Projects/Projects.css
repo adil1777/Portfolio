@@ -43,10 +43,10 @@
         padding: 5px 10px;
         font-size: 14px;
       }
-      .card-image-overlay {
+      .card-image-overly {
         font-size: 20px;
       }
-      .card-image-overlay span {
+      .card-image-overly span {
         display: inline-block;
         margin-left: 5px;
       }

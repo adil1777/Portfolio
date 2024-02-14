@@ -1,11 +1,10 @@
-import { BsFiletypeHtml, BsFiletypeCss, BsBootstrap } from "react-icons/bs";
+import { BsFiletypeHtml, BsFiletypeCss, BsBootstrap , BsFiletypeSql } from "react-icons/bs";
 import { TbBrandVisualStudio } from "react-icons/tb";
 import { FaNodeJs } from "react-icons/fa";
 import {
   SiJavascript,
   SiReact,
   SiMongodb,
-  SiMysql,
   SiGithub,
   SiExpress,
 } from "react-icons/si";
@@ -58,7 +57,7 @@ export const TechStackList = [
   {
     _id: 10,
     name: "SQL ",
-    icon: SiMysql,
+    icon: BsFiletypeSql,
   },
   {
     _id: 11,

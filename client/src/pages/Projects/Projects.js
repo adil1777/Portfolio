@@ -31,7 +31,7 @@ const Projects = () => {
                   <span className="card-notify-badge">Full stack</span>
                   <img src="banner1.jpg" alt="project1" />
                 </div>
-                <div className="card-image-overlay m-auto mt-3">
+                <div className="card-image-overly m-auto mt-3">
                   <span className="card-detail-badge">React</span>
                   <span className="card-detail-badge">Express</span>
                   <span className="card-detail-badge">Node</span>
@@ -59,7 +59,7 @@ const Projects = () => {
                   <span className="card-notify-badge">Full stack</span>
                   <img src="homyz.png" alt="project2" />
                 </div>
-                <div className="card-image-overlay m-auto mt-3">
+                <div className="card-image-overly m-auto mt-3">
                   <span className="card-detail-badge">React</span>
                   <span className="card-detail-badge">Express</span>
                   <span className="card-detail-badge">Node</span>
@@ -90,7 +90,7 @@ const Projects = () => {
                     alt="project1"
                   />
                 </div>
-                <div className="card-image-overlay m-auto mt-3">
+                <div className="card-image-overly m-auto mt-3">
                 <span className="card-detail-badge">React</span>
                   <span className="card-detail-badge">Express</span>
                   <span className="card-detail-badge">Node</span>
