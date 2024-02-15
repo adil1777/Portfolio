@@ -1,18 +1,18 @@
 import React from "react";
 import "./About.css";
-import { Reveal, Fade } from "react-awesome-reveal";
+import { Bounce } from "react-awesome-reveal";
 
 const About = () => {
   return (
     <>
-      <Reveal effect="fadeIn">
+        <Bounce>
         <div className="about" id="about">
           <div className="row">
             <div className="col-md-6  col-xl-6 col-lg-6 col-xs-12 about-img">
               <img src="image.jpeg" alt="profile_pic" />
             </div>
             <div className="col-md-6  col-xl-6 col-lg-6 col-xs-12 about-content">
-              <h1>About Me</h1>
+             <h1>About Me</h1>
               <p>
                 Greetings! I am <span className="self">Mohd Adil</span>,
                 currently pursuing my Bachelor's degree in{" "} 
@@ -38,7 +38,7 @@ const About = () => {
                 <span className="self pro"> 
                  <a href="https://full-stack-real-estate-jade.vercel.app/" style={{textDecoration:'none'}}>Homyz </a></span>. Adding to my experience, I
                 undertook a rewarding web development internship with{" "}
-                <span className="self">Oasis Infobyte</span>. This opportunity
+                <span className="self"> Oasis Infobyte </span>. This opportunity
                 not only allowed me to contribute to real-world projects but
                 also significantly enhanced my technical prowess. I am
                 enthusiastic about leveraging technology to solve problems and
@@ -49,7 +49,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </Reveal>
+        </Bounce>
     </>
   );
 };
