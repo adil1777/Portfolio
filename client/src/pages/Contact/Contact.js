@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import { Reveal, Fade } from "react-awesome-reveal";
+import {  Fade } from "react-awesome-reveal";
 import { BsFacebook, BsGithub, BsLinkedin } from "react-icons/bs";
+import { FaSquareInstagram } from "react-icons/fa6";
 import contact from "../../assets/images/contact.png";
 import { toast } from "react-toastify";
 import axios from "axios";
@@ -38,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <Reveal effect="fadeIn">
+
       <div className="contact" id="contact">
         <div className="card card0 border-0">
           <div className="row">
@@ -76,6 +77,7 @@ const Contact = () => {
                         <BsGithub color="black" size={30} className="ms-2" />
                       </a>
                       <BsFacebook color="#0077b5" size={30} className="ms-2" />
+                      <FaSquareInstagram color="#d62976" size={30} className="ms-2" />
                     </h6>
                     <div className="row px-3 mb-4">
                       <div className="line" />
@@ -124,7 +126,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </Reveal>
+  
   );
 };
 

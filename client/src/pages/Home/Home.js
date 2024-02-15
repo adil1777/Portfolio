@@ -1,16 +1,15 @@
 import React from "react";
 import "./Home.css";
-import { Reveal, Fade } from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 import Typewriter from "typewriter-effect";
 import Resume from "../../assets/docs/Resume.pdf";
 
 const Home = () => {
   return (
     <>
-      <Reveal effect="fadeIn">
         <div className="container-fluid home-container" id="home">
           <div className="container home-content">
-            <Fade direction="right" triggerOnce>
+            <Fade direction="left" triggerOnce>
               <h2>Hi I'm Mohd Adil</h2>
               <h1>
                 <Typewriter
@@ -25,7 +24,7 @@ const Home = () => {
                 />
               </h1>
             </Fade>
-            <Fade direction="bottom" triggerOnce>
+            <Zoom>
               <div className="home-buttons">
                 <a
                   className="btn btn-hire"
@@ -43,10 +42,9 @@ const Home = () => {
                   My Resume
                 </a>
               </div>
-            </Fade>
+            </Zoom>
           </div>
         </div>
-      </Reveal>
     </>
   );
 };
