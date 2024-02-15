@@ -1,6 +1,6 @@
 import React from "react";
 import "./Projects.css";
-import { Fade } from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 
 const Projects = () => {
   return (
@@ -24,7 +24,8 @@ const Projects = () => {
 
         {/* Project 1 */}
         <div className="col-md-4">
-          <Fade direction="left" triggerOnce>
+        {/* hhhhh */}
+          <Zoom>
             <div className="card rounded">
               <div className="card-image">
                 <span className="card-notify-badge">Full stack</span>
@@ -50,12 +51,12 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </Fade>
+          </Zoom>
         </div>
 
         {/* Project 2 */}
         <div className="col-md-4">
-          <Fade direction="left" triggerOnce>
+          <Zoom>
             <div className="card rounded">
               <div className="card-image">
                 <span className="card-notify-badge">Full stack</span>
@@ -81,12 +82,12 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </Fade>
+          </Zoom>
         </div>
 
         {/* Project 3 */}
         <div className="col-md-4">
-          <Fade direction="left" triggerOnce>
+          <Zoom>
             <div className="card rounded">
               <div className="card-image">
                 <span className="card-notify-badge">Full stack</span>
@@ -112,7 +113,7 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </Fade>
+          </Zoom>
         </div>
       </div>
     </div>
