@@ -5,7 +5,7 @@ import { Fade, Zoom } from "react-awesome-reveal";
 const Projects = () => {
   return (
     <div className="container project" id="projects">
-      <Fade direction="left" triggerOnce>
+      <Fade direction="left">
         <h2 className="col-12 mt-3 mb-1 text-center text-uppercase">
           MY PROJECTS
         </h2>

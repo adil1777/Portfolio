@@ -44,7 +44,7 @@ const Contact = () => {
         <div className="card card0 border-0">
           <div className="row">
             <div className="col-md-6 col-lg-6 col-xl-6 col-sm-12">
-              <Fade direction="left" triggerOnce>
+              <Fade direction="left" >
                 <div className="card1">
                   <div className="row border-line">
                     <img src={contact} alt="contact" className="image" />
@@ -53,7 +53,7 @@ const Contact = () => {
               </Fade>
             </div>
             <div className="col-lg-6 col-md-6">
-              <Fade direction="right" triggerOnce>
+              <Fade direction="right" >
                 <div className="card2 d-flex card border-0 px-4 py-5">
                   <div className="row">
                     <h6>
