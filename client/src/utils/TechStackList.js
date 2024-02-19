@@ -1,6 +1,7 @@
 import { BsFiletypeHtml, BsFiletypeCss, BsBootstrap , BsFiletypeSql } from "react-icons/bs";
 import { TbBrandVisualStudio } from "react-icons/tb";
 import { FaNodeJs } from "react-icons/fa";
+import { GoCodeReview } from "react-icons/go";
 import {
   SiJavascript,
   SiReact,
@@ -63,5 +64,10 @@ export const TechStackList = [
     _id: 11,
     name: "Git / Github ",
     icon: SiGithub,
+  },
+  {
+    _id: 12,
+    name: "C / C++ ",
+    icon: GoCodeReview,
   },
 ];
