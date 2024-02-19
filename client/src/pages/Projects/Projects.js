@@ -13,8 +13,7 @@ const Projects = () => {
 
         <p className="pb-3 text-center">
           Welcome to my project page, where innovation meets functionality!
-          Here, I'm thrilled to showcase three distinct projects - Homyz, Blood
-          Bank, and WeatherApp. Each project represents a unique facet of my
+          Here, I'm thrilled to showcase three distinct projects - Homyz, LifeDropHub, and DocCare. Each project represents a unique facet of my
           skills and interests, offering a glimpse into the versatile world of
           technology.
         </p>
@@ -39,7 +38,7 @@ const Projects = () => {
               </div>
               <div className="card-body text-center">
                 <div className="ad-title m-auto">
-                  <h6 className="text-uppercase">Blood Bank</h6>
+                  <h5 >LifeDropHub</h5>
                 </div>
                 <a
                   className="ad-btn"
