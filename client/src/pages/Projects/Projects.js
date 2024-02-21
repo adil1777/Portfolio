@@ -23,7 +23,6 @@ const Projects = () => {
 
         {/* Project 1 */}
         <div className="col-md-4">
-        {/* hhhhh */}
           <Zoom>
             <div className="card rounded">
               <div className="card-image">
@@ -84,13 +83,13 @@ const Projects = () => {
           </Zoom>
         </div>
 
-        {/* Project 3 */}
+        {/* Project 3  DocCare*/}
         <div className="col-md-4">
           <Zoom>
             <div className="card rounded">
               <div className="card-image">
                 <span className="card-notify-badge">Full stack</span>
-                <img src="doccare.png" alt="project1" />
+                <img src="doccare.jpg" alt="project1" />
               </div>
               <div className="card-image-overly m-auto mt-3">
                 <span className="card-detail-badge">React</span>
