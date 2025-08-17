@@ -20,7 +20,7 @@ const Menus = ({ toggle }) => {
         <>
           <Zoom>
             <div className="navbar-profile-pic">
-              <img src="image.jpeg" alt="profile pic" />
+              <img src="profile-image.jpg" alt="profile pic" />
             </div>
           </Zoom>
           <Reveal effect="fadeIn">

@@ -21,6 +21,7 @@ const transporter = nodemailer.createTransport({
 
 const sendEmailController = async (req, res) => {
   try {
+     console.log( req.body,"1111111111111111111111111111111");
     const { name, email, msg } = req.body;
 
     // Validation

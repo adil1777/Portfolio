@@ -14,10 +14,28 @@ const WorkExp = () => {
      <div className="work" id="work">
         <div className="container work-exp">
         <h2 className="col-12 mt-3 mb-1 text-center text-uppercase">
-             INTERNSHIP
+             EXPERIENCE/INTERNSHIP
         </h2>
         <hr />
         <VerticalTimeline>
+         <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: "white", color: "black" }}
+            contentArrowStyle={{ borderRight: "7px solid  white" }}
+            date="19 May 2024 - Present"
+            iconStyle={{ background: "#138781", color: "#fff" }}
+            icon={<PiCertificateLight />}
+          >
+            <h3 className="vertical-timeline-element-title">Associate Software Developer</h3>
+            <h4 className="vertical-timeline-element-subtitle">
+             Binmile Technologies 
+            </h4>
+            <p>
+                Backend Development, API Integration, Microservices, 
+                Cloud Services, Performance Optimization
+              </p>
+          </VerticalTimelineElement>
+
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{ background: "white", color: "black" }}
@@ -31,8 +49,8 @@ const WorkExp = () => {
               Oasis Infobyte
             </h4>
             <p>
-                Creative Direction, User Experience, Visual Design, Project
-                Management, Team Leading
+                Frontend Development, Responsive Design, 
+                JavaScript Enhancements, Project Deployment
               </p>
           </VerticalTimelineElement>
 
@@ -50,8 +68,8 @@ const WorkExp = () => {
              Salesforce
             </h4>
             <p>
-                Creative Direction, User Experience, Visual Design, Project
-                Management, Team Leading
+                Apex Development, Triggers, Flow Automation, 
+                Schema Customization, Custom Objects
               </p>
           </VerticalTimelineElement>
           </VerticalTimeline>
