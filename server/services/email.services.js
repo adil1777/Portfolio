@@ -1,5 +1,8 @@
 const transporter = require("../config/email");
 
+console.log("SMTP_MAIL exists:", Boolean(process.env.SMTP_MAIL));
+console.log("SMTP_PASS exists:", Boolean(process.env.SMTP_PASS));
+
 const sendContactEmail = async ({ name, email, msg }) => {
   const mailOptions = {
     from: process.env.SMTP_MAIL,
