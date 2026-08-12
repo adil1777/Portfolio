@@ -1,9 +1,11 @@
+const dotenv = require("dotenv");
+
+dotenv.config();
+
 const express = require("express");
 const cors =require ('cors');
-const dotenv = require('dotenv');
-const user = require("../server/routes/portfolioRoute")
-//dotenv configuration
-dotenv.config();
+const user = require("./routes/email.route")
+
 
 //rest object
 const app = express();
