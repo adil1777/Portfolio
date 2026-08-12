@@ -8,12 +8,16 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-transporter.verify((error, success) => {
+transporter.verify((error) => {
   if (error) {
-    console.error(`[EMAIL] SMTP connection failed :${error}`.bgRed.white);
-  } else {
-    console.log(`[EMAIL] SMTP server is ready :${success}`.bgGreen.white);
+    console.error(
+      "[EMAIL] SMTP connection failed:",
+      error.message
+    );
+    return;
   }
+
+  console.log("[EMAIL] SMTP server is ready");
 });
 
 module.exports = transporter;

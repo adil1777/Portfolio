@@ -4,7 +4,6 @@ dotenv.config();
 
 const express = require("express");
 const cors =require ('cors');
-const colors = require('colors');
 const user = require("./routes/email.route")
 
 
