@@ -6,13 +6,6 @@ const sendEmailController = async (req, res) => {
   try {
     const { name, email, msg } = req.body;
 
-    if (!name || !email || !msg) {
-      return res.status(statusCodes.BAD_REQUEST).json({
-        success: false,
-        message: "Please provide all fields",
-      });
-    }
-
     await emailService.sendContactEmail({
       name,
       email,
