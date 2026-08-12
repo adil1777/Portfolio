@@ -4,6 +4,7 @@ dotenv.config();
 
 const express = require("express");
 const cors =require ('cors');
+const colors = require('colors');
 const user = require("./routes/email.route")
 
 
@@ -22,5 +23,5 @@ app.use('/api/v1/portfolio',user);
 
 //listen
 app.listen(PORT,()=>{
-    console.log(`Server Running On PORT ${PORT}`);
+    console.log(`Server Running On PORT ${PORT}`.bgGreen.white);
 });
