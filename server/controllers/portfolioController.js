@@ -1,4 +1,5 @@
 const nodemailer = require("nodemailer");
+import statusCodes from "../utils/statusCodes"
 
 // Transport
 const dotenv = require("dotenv")
@@ -21,12 +22,11 @@ const transporter = nodemailer.createTransport({
 
 const sendEmailController = async (req, res) => {
   try {
-     console.log( req.body,"1111111111111111111111111111111");
     const { name, email, msg } = req.body;
 
     // Validation
     if (!name || !email || !msg) {
-      return res.status(400).send({
+      return res.status(statusCodes.BAD_REQUEST).send({
         success: false,
         message: 'Please Provide All Fields',
       });
@@ -52,14 +52,14 @@ const sendEmailController = async (req, res) => {
 
     console.log("Email sent:", info.response);
 
-    return res.status(200).send({
+    return res.status(statusCodes.OK).send({
       success: true,
       message: "Your Message Sent Successfully",
     });
   } catch (error) {
     console.error("Error:", error);
 
-    return res.status(500).send({
+    return res.status(statusCodes.INTERNAL_SERVER_ERROR).send({
       success: false,
       message: 'Failed to send email',
       error: error.message,
