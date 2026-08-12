@@ -23,14 +23,17 @@ const sendEmailController = async (req, res) => {
       success: true,
       message: message.MESSAGE_SENT_SUCCESSFULLY,
     });
-  } catch (error) {
-    console.error("Email service error:", error);
+  }catch (error) {
+  console.error("[EMAIL] Error:", error);
+  console.error("[EMAIL] Message:", error.message);
+  console.error("[EMAIL] Code:", error.code);
 
-    return res.status(statusCodes.INTERNAL_SERVER_ERROR).json({
-      success: false,
-      message: "Failed to send email",
-    });
-  }
+  return res.status(statusCodes.INTERNAL_SERVER_ERROR).json({
+    success: false,
+    message: "Failed to send email",
+    error: error.message,
+  });
+}
 };
 
 module.exports = {
