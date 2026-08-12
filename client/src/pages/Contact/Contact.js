@@ -73,7 +73,7 @@ const Contact = () => {
                       <BsLinkedin color="#0077b5" size={30} className="ms-2" />
                     </a>
                     <a
-                      href="https://github.com/adil1777?tab=repositories"
+                      href="https://github.com/adil1777"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
