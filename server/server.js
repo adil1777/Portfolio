@@ -22,5 +22,5 @@ app.use('/api/v1/portfolio',user);
 
 //listen
 app.listen(PORT,()=>{
-    console.log(`Server Running On PORT ${PORT}`.bgGreen.white);
+    console.log(`Server Running On PORT ${PORT}`);
 });
