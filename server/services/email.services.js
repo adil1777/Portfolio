@@ -1,5 +1,6 @@
 const { Resend } = require("resend");
 const messages = require("../utils/message");
+const contactEmailTemplate = require("../templates/contactEmail.template");
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -11,15 +12,11 @@ const sendContactEmail = async ({ name, email, msg }) => {
       replyTo: email,
       subject: messages.MESSAGE_FROM_MERN_PORTFOLIO,
 
-      html: `
-        <h3>New Contact Message</h3>
-
-        <ul>
-          <li><strong>Name:</strong> ${name}</li>
-          <li><strong>Email:</strong> ${email}</li>
-          <li><strong>Message:</strong> ${msg}</li>
-        </ul>
-      `,
+      html: contactEmailTemplate({
+        name,
+        email,
+        msg,
+      }),
     });
 
     if (error) {
@@ -42,32 +39,4 @@ module.exports = {
   sendContactEmail,
 };
 
-
-// const transporter = require("../config/email");
-
-// console.log("SMTP_MAIL exists:", Boolean(process.env.SMTP_MAIL));
-// console.log("SMTP_PASS exists:", Boolean(process.env.SMTP_PASS));
-
-// const sendContactEmail = async ({ name, email, msg }) => {
-//   const mailOptions = {
-//     from: process.env.SMTP_MAIL,
-//     to: process.env.SMTP_MAIL,
-//     replyTo: email,
-//     subject: "Regarding MERN Portfolio App",
-//     html: `
-//       <h3>Contact Form</h3>
-//       <ul>
-//         <li><strong>Name:</strong> ${name}</li>
-//         <li><strong>Email:</strong> ${email}</li>
-//         <li><strong>Message:</strong> ${msg}</li>
-//       </ul>
-//     `,
-//   };
-
-//   return transporter.sendMail(mailOptions);
-// };
-
-// module.exports = {
-//   sendContactEmail,
-// };
 
