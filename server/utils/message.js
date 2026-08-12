@@ -2,8 +2,7 @@
 const messages = {
   MESSAGE_SENT_SUCCESSFULLY : "Your message have sent successfully",
   INTERNAL_SERVER_ERROR: "An internal server error occurred",
-  MISSING_AUTH_HEADER: "Missing Authorization header",
-  INVALID_OTP_TOKEN: "Invalid OTP token",
+  MESSAGE_FROM_MERN_PORTFOLIO : "New message from MERN Portfolio",
 };
 
 module.exports = messages;
